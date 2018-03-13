@@ -1,0 +1,71 @@
+program example int @ i, @ j
+        real @ a, @ b
+        label @ m1
+begin a=1
+  j=1
+  for i=0 to 8 by 1 while {j<=7} a=a+1
+  j=j+2
+  cout<<a
+  cout<<j
+  end
+  cin>>b
+  if b<a then goto m1
+  cout<<0
+  m1: cout<<b
+end.
+
+program example int @ i, @ j
+begin j=1
+  for i=1 to 8 by 1 while {j<=5} cout<<j
+  cout<<i
+  j=j+1
+  end
+end.
+
+program example int @ i, @ j
+        real @ a, @ b
+        label @ m1
+begin a=1
+  j=1
+  for i=0 to 8 by 1 while {j<=7} a=a+1
+  j=j+2
+  cout<<a
+  cout<<j
+  end
+  cin>>b
+  if b<a then goto m1
+  cout<<j
+  m1: cout<<b
+end.
+
+program example
+        int @ i, @ j, @ k
+        real @ a, @ b
+        label @ m1
+begin
+    a=1
+    j=1
+    cin>>k>>b
+    cout<<b
+    for i=k to b by 1 while {j<=7} a=a+1
+        j=j+2
+        cout<<i<<a<<b
+    end
+end.
+
+program example int @ i, @ j
+            real @ a, @ b
+            label @ m1
+    begin a= 1 + 5
+        j=1
+        for i=0 to 8 by 1 while {j<=7} a=a+1
+            j=j+2
+            cout<<i
+            cout<<a
+            cout<<j
+        end
+        cin>>b
+        if b<a then goto m1
+        cout<<j
+        m1: cout<<b
+    end.

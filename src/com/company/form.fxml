@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.Controller">
+    <children>
+      <TabPane layoutX="5.0" layoutY="4.0" prefHeight="547.0" prefWidth="654.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Головна сторінка">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="inputProgram" prefHeight="329.0" prefWidth="474.0" />
+                        <TextArea fx:id="console" layoutX="-7.0" layoutY="371.0" prefHeight="149.0" prefWidth="481.0" />
+                        <Text layoutX="211.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Консоль:" wrappingWidth="52.748046875" />
+                        <Button fx:id="performing" layoutX="487.0" layoutY="153.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="151.0" text="Запустити" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Лексичний аналізатор">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="493.0" prefWidth="859.0">
+                     <children>
+                        <Text layoutX="124.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вихідна таблиця лексем" wrappingWidth="135.748046875" />
+                          <TableView fx:id="table1" layoutX="14.0" layoutY="35.0" prefHeight="472.0" prefWidth="357.0">
+                              <columns>
+                                  <TableColumn fx:id="column1_1" prefWidth="33.0" text="№" />
+                                  <TableColumn fx:id="column1_2" prefWidth="60.0" text="№ рядка" />
+                                  <TableColumn fx:id="column1_3" prefWidth="105.0" text="Лексема" />
+                                  <TableColumn fx:id="column1_4" prefWidth="81.0" text="Код лексеми" />
+                                  <TableColumn fx:id="column1_5" prefWidth="79.0" text="Код idn/con" />
+                              </columns>
+                          </TableView>
+                        <TableView fx:id="table2" layoutX="398.0" layoutY="35.0" prefHeight="182.0" prefWidth="182.0">
+                          <columns>
+                            <TableColumn fx:id="column2_1" prefWidth="35.0" text="Код" />
+                            <TableColumn fx:id="column2_2" prefWidth="81.0" text="Idn" />
+                              <TableColumn fx:id="column2_3" prefWidth="65.0" text="Тип" />
+                              <TableColumn fx:id="column2_4" prefWidth="67.0" text="Значення" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="400.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Таблиця ідентифікаторів і міток" wrappingWidth="179.748046875" />
+                        <Text layoutX="438.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Таблиця констант" wrappingWidth="102.748046875" />
+                        <TableView fx:id="table3" layoutX="435.0" layoutY="271.0" prefHeight="147.0" prefWidth="109.0">
+                          <columns>
+                            <TableColumn fx:id="column3_1" minWidth="0.0" prefWidth="50.0" text="Код" />
+                            <TableColumn fx:id="column3_2" prefWidth="57.0" text="Лексема" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Синтаксичний аналізатор">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="245.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Таблиця висхідного розбору" wrappingWidth="162.748046875" />
+                        <TableView fx:id="table4" layoutX="14.0" layoutY="31.0" prefHeight="477.0" prefWidth="624.0">
+                           <columns>
+                              <TableColumn fx:id="column4_1" prefWidth="57.0" text="№ кроку" />
+                              <TableColumn fx:id="column4_2" prefWidth="240.0" text="Стек" />
+                              <TableColumn fx:id="column4_3" prefWidth="54.0" text="Знак" />
+                              <TableColumn fx:id="column4_4" prefWidth="272.0" text="Вхідний ланцюг" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Поліз">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="518.0" prefWidth="885.0">
+                     <children>
+                        <TextArea fx:id="poliz" layoutX="14.0" layoutY="472.0" prefHeight="32.0" prefWidth="626.0" />
+                        <TableView fx:id="table5" layoutX="354.0" layoutY="14.0" prefHeight="169.0" prefWidth="118.0">
+                           <columns>
+                              <TableColumn fx:id="column5_1" prefWidth="56.0" text="Мітка" />
+                              <TableColumn fx:id="column5_2" prefWidth="61.0" text="Позиція" />
+                           </columns>
+                        </TableView>
+                        <Text layoutX="262.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Згенерований поліз:" wrappingWidth="117.748046875" />
+                        <TableView fx:id="table6" layoutX="14.0" layoutY="14.0" prefHeight="427.0" prefWidth="330.0">
+                          <columns>
+                            <TableColumn fx:id="column6_1" prefWidth="98.0" text="Вхідна лексема" />
+                            <TableColumn fx:id="column6_2" prefWidth="115.0" text="Стек" />
+                              <TableColumn fx:id="column6_3" prefWidth="116.0" text="Поліз" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="table7" layoutX="354.0" layoutY="197.0" prefHeight="244.0" prefWidth="289.0">
+                          <columns>
+                            <TableColumn fx:id="column7_1" prefWidth="105.0" text="Вхідна лексема" />
+                            <TableColumn fx:id="column7_2" prefWidth="183.0" text="Стек" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="514.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Виконання поліз:" wrappingWidth="95.748046875" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>
